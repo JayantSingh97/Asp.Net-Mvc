@@ -283,3 +283,13 @@ Mvc Code Library
         public string Role { get; set; }
     }
 
+
+# Attribute  routing in mvc 
+
+        [HttpGet]
+        [Route(nameof(Dashboard))] 
+        public JsonResult GetState(int id)
+        {
+            return _Repository.GetDataListById(id);
+        }
+
