@@ -43,11 +43,11 @@ Mvc Code Library
          
         
         
-  #How to make AjAX Request in Mvc
-  #html
+  # How to make AjAX Request in Mvc
+  # html
   <div id="JsonResultContainer"></div>
   
-  #jquery
+  # jquery
   $(document).ready(function () { 
         $.ajax({
             type: "post",
@@ -100,7 +100,7 @@ Mvc Code Library
         });
     });
     
- #Controller
+ # Controller
         [HttpPost]
         public JsonResult AjaxMethod(FormCollection _parameters)
         {
