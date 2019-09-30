@@ -39,3 +39,102 @@ Mvc Code Library
              <button type="submit">Upload FIle</button>
             
          }
+         
+         
+        
+        
+  #How to make AjAX Request in Mvc
+  #html
+  <div id="JsonResultContainer"></div>
+  
+  #jquery
+  $(document).ready(function () { 
+        $.ajax({
+            type: "post",
+            url: "Url",
+            data: { ParameterName: $('#elementvalueifany').val() },
+            dataType: "json",
+            traditional: true,
+            success: function (data) {
+                $("#JsonResultContainer").html(data);
+                console.log(data);
+            }
+        });
+        
+        $.ajax({
+            type: "Get",
+            url: "Url",
+            data: { ParameterName: $('#elementvalueifany').val() },
+            dataType: "json",
+            traditional: true,
+            success: function (data) {
+                $("#JsonResultContainer").html(data);
+                console.log(data);
+            }
+        });
+        
+        
+        $.ajax({
+            type: "Put",
+            url: "Url",
+            data: { ParameterName: $('#elementvalueifany').val() },
+            dataType: "json",
+            traditional: true,
+            success: function (data) {
+                $("#JsonResultContainer").html(data);
+                console.log(data);
+            }
+        });
+        
+        
+        $.ajax({
+            type: "Delete",
+            url: "Url",
+            data: { ParameterName: $('#elementvalueifany').val() },
+            dataType: "json",
+            traditional: true,
+            success: function (data) {
+                $("#JsonResultContainer").html(data);
+                console.log(data);
+            }
+        });
+    });
+    
+ #Controller
+        [HttpPost]
+        public JsonResult AjaxMethod(FormCollection _parameters)
+        {
+             var SuccessMessage = "Request was successful.";
+             var JsonResult =  Json(SuccessMessage, JsonRequestBehavior.AllowGet);
+             View(JsonResult)
+        }
+        
+        [HttpDelete]
+        public JsonResult AjaxMethod(FormCollection _parameters)
+        {
+             var SuccessMessage = "Request was successful.";
+             var JsonResult =  Json(SuccessMessage, JsonRequestBehavior.AllowGet);
+             View(JsonResult)
+        }
+        
+        
+        [HttpGet]
+        public JsonResult AjaxMethod(FormCollection _parameters)
+        {
+             var SuccessMessage = "Request was successful.";
+             var JsonResult =  Json(SuccessMessage, JsonRequestBehavior.AllowGet);
+             View(JsonResult)
+        }
+        
+        
+        
+        [HttpPut]
+        public JsonResult AjaxMethod(FormCollection _parameters)
+        {
+             var SuccessMessage = "Request was successful.";
+             var JsonResult =  Json(SuccessMessage, JsonRequestBehavior.AllowGet);
+             View(JsonResult)
+        }
+        
+        
+        
