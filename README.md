@@ -45,6 +45,7 @@ Mvc Code Library
         
   # How to make AjAX Request in Mvc
   # html
+  
   <div id="JsonResultContainer"></div>
   
   # jquery
